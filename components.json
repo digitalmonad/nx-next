@@ -1,0 +1,17 @@
+{
+  "$schema": "https://ui.shadcn.com/schema.json",
+  "style": "new-york",
+  "rsc": true,
+  "tsx": true,
+  "tailwind": {
+    "config": "modules/shared/shared-ui",
+    "css": "modules/shared/shared-ui",
+    "baseColor": "stone",
+    "cssVariables": true,
+    "prefix": ""
+  },
+  "aliases": {
+    "components": "/modules/shared/shared-ui/src/components",
+    "utils": "/modules/shared/shared-ui/src/lib/utils"
+  }
+}
