@@ -17,6 +17,13 @@
     ],
     "sharedGlobals": []
   },
+  "targetDefaults": {
+    "test": {
+      "options": {
+        "passWithNoTests": true
+      }
+    }
+  },
   "plugins": [
     {
       "plugin": "@nx/next/plugin",
