@@ -46,3 +46,7 @@ Thumbs.db
 out
 
 storybook-static
+
+# Env
+.env
+.local.env
