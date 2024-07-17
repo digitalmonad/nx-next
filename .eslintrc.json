@@ -21,5 +21,6 @@
     "next",
     "next/core-web-vitals",
     "./.eslintrc.base.json"
-  ]
+  ],
+  "env": { "worker": true }
 }

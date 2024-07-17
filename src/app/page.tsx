@@ -1,6 +1,9 @@
 import { Button } from '@nx-next/shared-ui/components/button';
+import { ArrowRight } from 'lucide-react';
 
-export default function Index() {
+export default async function Home() {
+  const user = await (await fetch('/api/user')).json();
+
   /*
    * Replace the elements below with your own.
    *
@@ -8,10 +11,14 @@ export default function Index() {
    */
   return (
     <div className="flex h-screen flex-col items-center justify-center gap-y-4 border border-red-500">
-      <h1>Welcome</h1>
+      <h1 className="text-3xl">Welcome</h1>
       <div className="flex gap-x-2">
-        <Button variant={'secondary'}>Button</Button>
-        <Button variant={'default'}>Button</Button>
+        {user.firstName} {user.lastName}
+      </div>
+      <div className="flex gap-x-2">
+        <Button variant={'default'}>
+          Continue <ArrowRight className="ml-2 h-4 w-4" />
+        </Button>
       </div>
     </div>
   );

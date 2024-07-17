@@ -1,4 +1,4 @@
-import './global.css';
+import './app.css';
 import { Inter as FontSans } from 'next/font/google';
 import { cn } from 'modules/shared/shared-ui/src/lib/utils';
 
