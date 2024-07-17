@@ -2,7 +2,15 @@ import { Button } from '@nx-next/shared-ui/components/button';
 import { ArrowRight } from 'lucide-react';
 
 export default async function Home() {
-  const user = await (await fetch('/api/user')).json();
+  let user;
+
+  try {
+    user = await (
+      await fetch(process.env.NEXT_PUBLIC_API_URL + '/api/user')
+    ).json();
+  } catch (error) {
+    console.log('FETCH ERROR IGNORED ;)');
+  }
 
   /*
    * Replace the elements below with your own.
@@ -13,7 +21,7 @@ export default async function Home() {
     <div className="flex h-screen flex-col items-center justify-center gap-y-4 border border-red-500">
       <h1 className="text-3xl">Welcome</h1>
       <div className="flex gap-x-2">
-        {user.firstName} {user.lastName}
+        {user?.firstName} {user?.lastName}
       </div>
       <div className="flex gap-x-2">
         <Button variant={'default'}>
