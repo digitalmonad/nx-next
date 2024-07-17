@@ -15,6 +15,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@nx-next/shared-ui/": ["modules/shared/shared-ui/"],
       "@nx-next/shared-ui/components/*": [
         "modules/shared/shared-ui/src/components/ui/*"
       ],
