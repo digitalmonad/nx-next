@@ -26,5 +26,16 @@
     "dist/nx-next/.next/types/**/*.ts",
     "next-env.d.ts"
   ],
-  "extends": "./tsconfig.base.json"
+  "extends": "./tsconfig.base.json",
+  "ts-node": {
+    "compilerOptions": {
+      "module": "commonjs"
+    }
+  },
+  "exclude": ["**/*.stories.ts", "**/*.stories.js"],
+  "references": [
+    {
+      "path": "./tsconfig.storybook.json"
+    }
+  ]
 }
