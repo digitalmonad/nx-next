@@ -15,8 +15,10 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@nx-next/shared-ui": ["modules/shared/shared-ui/src/index.ts"],
-      "@nx-next/shared-ui/server": ["modules/shared/shared-ui/src/server.ts"]
+      "@nx-next/shared-ui/components/*": [
+        "modules/shared/shared-ui/src/components/ui/*"
+      ],
+      "@nx-next/shared-ui/utils": ["modules/shared/shared-ui/src/lib/utils"]
     }
   },
   "exclude": [
