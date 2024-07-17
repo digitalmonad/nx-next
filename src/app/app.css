@@ -1,0 +1,5 @@
+@import '../../modules/shared/shared-ui/shared-ui.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;

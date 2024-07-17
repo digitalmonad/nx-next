@@ -5,16 +5,22 @@ const config: StorybookConfig = {
     '../src/**/*.stories.@(js|jsx|ts|tsx|mdx)',
     '../modules/**/*.stories.@(js|jsx|ts|tsx|mdx)',
   ],
-  addons: ['@storybook/addon-essentials', '@storybook/addon-interactions'],
-
+  addons: [
+    '@storybook/addon-essentials',
+    '@storybook/addon-interactions',
+    'storybook-msw-addon',
+  ],
   framework: {
     name: '@storybook/nextjs',
     options: {},
   },
-
   typescript: {
     reactDocgen: 'react-docgen-typescript',
   },
+  features: {
+    experimentalRSC: true,
+  },
+  staticDirs: ['../public'],
 };
 
 export default config;

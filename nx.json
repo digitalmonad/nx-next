@@ -25,6 +25,11 @@
       "options": {
         "passWithNoTests": true
       }
+    },
+    "storybook": {
+      "options": {
+        "port": 6006
+      }
     }
   },
   "plugins": [
