@@ -1,5 +1,5 @@
 {
-  "ignorePatterns": ["!**/*", ".next/**/*"],
+  "ignorePatterns": ["!**/*", ".next/**/*", "storybook-static"],
   "overrides": [
     {
       "files": ["*.ts", "*.tsx"],
