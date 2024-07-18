@@ -10,14 +10,15 @@ module.exports = {
     },
     extend: {
       colors: {
-        border: 'hsl(var(--border))',
+        // Variables used here are mix of ones defined in shared-ui.css and ones generated from Figma using Styled Dictionary and Tokens Studio Figma Plugin
+        border: 'var(--color-neutral-200)',
         input: 'hsl(var(--input))',
         ring: 'hsl(var(--ring))',
         background: 'hsl(var(--background))',
         foreground: 'hsl(var(--foreground))',
         primary: {
-          DEFAULT: 'hsl(var(--primary))',
-          foreground: 'hsl(var(--primary-foreground))',
+          DEFAULT: 'var(--color-fuchsia-600)',
+          foreground: 'var(--color-white)',
         },
         secondary: {
           DEFAULT: 'hsl(var(--secondary))',
