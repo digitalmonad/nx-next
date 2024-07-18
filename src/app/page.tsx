@@ -16,7 +16,7 @@ export default async function Home() {
    * Note: The corresponding styles are in the ./index.tailwind file.
    */
   return (
-    <div className="flex h-screen flex-col items-center justify-center gap-y-4 border border-red-500">
+    <div className="flex h-screen flex-col items-center justify-center gap-y-4 border border-border">
       <h1 className="text-3xl">Welcome</h1>
       <div className="flex gap-x-2">
         {user?.firstName} {user?.lastName}

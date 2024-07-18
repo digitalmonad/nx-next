@@ -1,0 +1,18 @@
+{
+  "name": "design-tokens-ui",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "library",
+  "sourceRoot": "modules/shared/design-tokens-ui/src",
+  "tags": [],
+  "targets": {
+    "build": {
+      "executor": "@nxkit/style-dictionary:build",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "modules/shared/design-tokens-ui/output",
+        "styleDictionaryConfig": "modules/shared/design-tokens-ui/style-dictionary.config.ts",
+        "tsConfig": "modules/shared/design-tokens-ui/tsconfig.json"
+      }
+    }
+  }
+}
