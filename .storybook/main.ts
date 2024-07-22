@@ -13,7 +13,7 @@ const config: StorybookConfig = {
   ],
   env: (config) => ({
     ...config,
-    STORYBOOK_CI: false,
+    STORYBOOK_CI: process.env.STORYBOOK_CI as string,
   }),
   framework: {
     name: '@storybook/nextjs',
