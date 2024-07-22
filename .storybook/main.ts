@@ -6,18 +6,14 @@ const config: StorybookConfig = {
     '../modules/**/*.stories.@(js|jsx|ts|tsx|mdx)',
   ],
   addons: [
-    {
-      name: '@storybook/addon-essentials',
-      options: {
-        backgrounds: false, // 👈 disable the backgrounds addon
-      },
-    },
+    '@storybook/addon-essentials',
     '@storybook/addon-interactions',
+    '@storybook/addon-designs',
     'storybook-msw-addon',
   ],
   env: (config) => ({
     ...config,
-    STORYBOOK_CI: process.env.STORYBOOK_CI as string,
+    STORYBOOK_CI: false,
   }),
   framework: {
     name: '@storybook/nextjs',

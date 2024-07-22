@@ -10,8 +10,6 @@ const fontSans = FontSans({
   subsets: ['latin'],
 });
 
-console.log('ENV_VARS: ', process.env);
-
 // Initialize MSW
 initialize({
   serviceWorker: {

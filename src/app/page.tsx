@@ -1,15 +1,11 @@
 import { Button } from '@nx-next/shared-ui/components/button';
-import { ArrowRight } from 'lucide-react';
+import { DownloadIcon } from 'lucide-react';
+
+import { AsyncLineChartCard } from './AsyncLineChartCard';
+import { Suspense } from 'react';
+import { LineChartCardLoading } from './line-chart/line-chart-card-loading';
 
 export default async function Home() {
-  let user;
-
-  try {
-    user = await (await fetch('/api/user')).json();
-  } catch (error) {
-    console.log('SSR FETCH ERROR IGNORED ;)');
-  }
-
   /*
    * Replace the elements below with your own.
    *
@@ -17,14 +13,18 @@ export default async function Home() {
    */
   return (
     <div className="flex h-screen flex-col items-center justify-center gap-y-4 border border-border">
-      <h1 className="text-3xl">Welcome</h1>
-      <div className="flex gap-x-2">
-        {user?.firstName} {user?.lastName}
-      </div>
-      <div className="flex gap-x-2">
+      <div className="flex w-full max-w-3xl justify-end">
         <Button variant={'default'}>
-          Continue <ArrowRight className="ml-2 h-4 w-4" />
+          Download data <DownloadIcon className="ml-2 h-4 w-4" />
         </Button>
+      </div>
+      <div className="w-full max-w-3xl">
+        <Suspense fallback={<LineChartCardLoading />}>
+          <AsyncLineChartCard />
+        </Suspense>
+      </div>
+      <div className="flex w-full max-w-3xl justify-end">
+        (intentional hardcoded 2 seconds server response delay)
       </div>
     </div>
   );
