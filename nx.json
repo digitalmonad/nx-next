@@ -95,6 +95,5 @@
         "unitTestRunner": "vitest"
       }
     }
-  },
-  "nxCloudAccessToken": "NDViNTA1MDktODE5Ny00ZjY0LWIzMzAtOTgxOTM5NzhhYzM2fHJlYWQtd3JpdGU="
+  }
 }
