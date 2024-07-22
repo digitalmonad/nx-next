@@ -10,10 +10,12 @@ const fontSans = FontSans({
   subsets: ['latin'],
 });
 
+console.log('ENV: ', process.env);
+
 // Initialize MSW
 initialize({
   serviceWorker: {
-    url: `${process.env.STORYBOOK_CI ? `/nx-next/` : '/'}apiMockServiceWorker.js`,
+    url: `${process?.env?.STORYBOOK_CI ? `/nx-next/` : '/'}apiMockServiceWorker.js`,
   },
 });
 
