@@ -15,7 +15,7 @@ console.log('ENV: ', process.env);
 // Initialize MSW
 initialize({
   serviceWorker: {
-    url: `/nx-next/apiMockServiceWorker.js`,
+    url: `/nx-next/LOL.js`,
   },
 });
 
