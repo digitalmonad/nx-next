@@ -14,7 +14,7 @@ export const AsyncLineChartCard = async () => {
     data = await (await fetch(baseUrl + '/api/chart')).json();
   } catch (error) {
     console.log(error);
-    console.log('SSR FETCH ERROR IGNORED ;)');
+    console.log('SSR FETCH ERROR IGNORED');
     return null;
   }
 
