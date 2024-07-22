@@ -15,7 +15,7 @@ console.log('ENV: ', process.env);
 // Initialize MSW
 initialize({
   serviceWorker: {
-    url: `${process?.env?.STORYBOOK_CI ? `/nx-next/` : '/'}apiMockServiceWorker.js`,
+    url: `/nx-next/apiMockServiceWorker.js`,
   },
 });
 
